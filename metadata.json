@@ -1,0 +1,8 @@
+{
+  "name": "MichaelWalshOS with Installer and Agent",
+  "description": "Simulate a computer with a UI that is generated dynamically from user interactions.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Walsh OS</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        /* Define classes the LLM is instructed to use, applying Tailwind's styles */
+        .llm-button {
+          @apply bg-blue-600 text-white border-none rounded-md py-2 px-4 m-2 cursor-pointer text-base font-medium text-center transition-colors hover:bg-blue-700 active:bg-blue-800 active:transform active:translate-y-px;
+        }
+        .llm-text {
+          @apply m-2 text-base text-gray-800 leading-relaxed;
+        }
+        .llm-title {
+          /* New class for titles */
+          @apply font-bold text-xl text-gray-900 mb-3 mt-1 mx-2; /* Added mt-1 and mx-2 for consistent spacing with llm-text */
+        }
+        .llm-input,
+        .llm-textarea {
+          @apply m-2 p-2 w-full border border-gray-300 rounded-md bg-white font-sans text-gray-800 text-sm transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300;
+        }
+        .llm-textarea {
+          @apply min-h-[120px];
+        }
+        .llm-container {
+          @apply w-full flex flex-col items-start mb-4 gap-2 p-2;
+        }
+        .llm-row {
+          @apply w-full flex items-center mb-2 gap-2;
+        }
+        .llm-label {
+          @apply mr-1 text-sm text-gray-600;
+        }
+        /* Styles for generated icons to match desktop icons */
+        .icon {
+          @apply w-24 h-28 flex flex-col items-center justify-start text-center m-2 p-2 cursor-pointer select-none rounded-lg transition-colors hover:bg-blue-100 focus:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500;
+        }
+        .icon-image {
+          @apply text-5xl mb-2 drop-shadow-sm;
+        }
+        .icon-label {
+          @apply text-sm text-gray-800 font-medium break-words max-w-full leading-tight;
+        }
+        /* New classes for the Terminal app */
+        .terminal {
+          @apply bg-black text-green-400 font-mono p-4 rounded-b-lg h-full flex flex-col;
+        }
+        .terminal-output {
+          @apply flex-grow overflow-y-auto;
+        }
+        .terminal-line {
+          @apply whitespace-pre-wrap;
+        }
+        .terminal-form {
+          @apply flex items-center;
+        }
+        .terminal-prompt {
+          @apply pr-2;
+        }
+        .terminal-input {
+          @apply bg-transparent border-none text-green-400 focus:outline-none flex-grow w-full;
+        }
+        /* New classes for the Web Browser app */
+        .browser-nav {
+          @apply bg-gray-200 p-2 flex items-center gap-2 border-b border-gray-300;
+        }
+        .browser-input {
+          @apply flex-grow bg-white rounded-full py-1 px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800;
+        }
+        .browser-button {
+          @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-3 rounded-full transition-colors;
+        }
+        .browser-content {
+          @apply p-4;
+        }
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.13.0",
+    "@tailwindcss/browser": "https://esm.sh/@tailwindcss/browser@^4.1.10",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.1.3",
+    "url": "https://aistudiocdn.com/url@^0.11.4"
+  }
+}
+</script>
+    <link rel="stylesheet" href="/index.css" />
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
